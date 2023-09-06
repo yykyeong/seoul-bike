@@ -1,0 +1,242 @@
+
+
+/* visual-area */
+.visual-area {
+  height: 100vh;
+  background: url(/img/mainimg.png) no-repeat center / cover;
+  text-align: center;
+  position: relative;
+
+  .title {
+    padding-top: 150px;
+    font-size: 30px;
+    font-weight: 600;
+
+    strong {
+      font-weight: 700;
+      font-size: inherit;
+      color: $font-point-color;
+    }
+  }
+
+  .main-tab-list {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    gap: 5px;
+    padding: 0 5px;
+
+    li {
+      flex: 1;
+
+      a {
+        background-color: $point-color;
+        color: $white;
+        display: block;
+        padding: 20px;
+        border-radius: 5px;
+        transition: .5s;
+
+        &:hover {
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          transform: translateY(-15px);
+          background-color: $white;
+          color: $point-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+/* info-area */
+.info-area {
+
+  .info-img {
+    .info-img-list {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 7px;
+
+      .info-img-item {
+        width: 47%;
+        position: relative;
+        overflow: hidden;
+
+        &::before,
+        &::after,
+        span::before,
+        span::after {
+          content: '';
+          position: absolute;
+          display: block;
+          background-color: $point-color;
+          z-index: 9;
+          transition: .3s;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+          right: 100%;
+          height: 5px;
+        }
+
+        &::after {
+          top: 0;
+          right: 0;
+          bottom: 100%;
+          width: 5px;
+        }
+
+        &:hover {
+          &::before {
+            right: 0;
+            transition-delay: 0s;
+          }
+
+          &::after {
+            bottom: 0;
+            transition-delay: .2s;
+          }
+
+          img {
+            transform: scale(1.1);
+
+          }
+        }
+
+        img {
+          width: 100%;
+          display: block;
+          transition: .3s;
+        }
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+
+          &::before {
+            bottom: 0;
+            right: 0;
+            left: 100%;
+            height: 5px;
+          }
+
+          &::after {
+            bottom: 0;
+            left: 0;
+            top: 100%;
+            width: 5px;
+          }
+
+          &:hover {
+            &::before {
+              left: 0;
+              transition-delay: .4s;
+            }
+
+            &::after {
+              top: 0;
+              transition-delay: .6s;
+            }
+          }
+
+        }
+
+
+      }
+    }
+  }
+}
+
+/* rental-area */
+.rental-area {
+  background-color: #f6f6f7;
+
+  input[name = rentaltab] {
+    display: none;
+  }
+
+  .rental-content {
+    display: flex;
+    justify-content: center;
+
+    .rental-tab-group {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+
+      label {
+        cursor: pointer;
+        text-align: center;
+
+        span {
+          display: block;
+          margin-top: 15px;
+        }
+      }
+  
+      .rental-tab-img {
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+          filter: brightness(.5);
+        }
+      }
+    }
+
+    .rental-tab-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      .tab {
+        display: none;
+
+        h2 {
+          font-size: 23px;
+          margin-bottom: 15px;
+        }
+
+      }
+    }
+  }
+
+  input[id=tab1]:checked ~ .rental-tab-group label[for=tab1], 
+  input[id=tab2]:checked ~ .rental-tab-group label[for=tab2],
+  input[id=tab3]:checked ~ .rental-tab-group label[for=tab3] {
+
+    img {
+      filter: brightness(1);
+    }
+
+    span {
+      color: $point-color;
+      font-weight: bold;
+    }
+  }
+
+  input[id=tab1]:checked ~ .rental-tab-content .tab1,
+  input[id=tab2]:checked ~ .rental-tab-content .tab2,
+  input[id=tab3]:checked ~ .rental-tab-content .tab3 {
+    display: block;
+}
+}
+
+
+/* app-area */
+.app-area {
+  
+}

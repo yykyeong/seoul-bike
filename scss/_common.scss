@@ -1,0 +1,20 @@
+section:not(.visual-area) {
+  padding: 65px 0;
+}
+
+.common-inner {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.common-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 30px;
+
+    b {
+      font-size: 24px;
+      color: $font-point-color;
+    }
+}
