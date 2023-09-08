@@ -240,3 +240,83 @@ section:not(.visual-area) {
 }
 
 /* app-area */
+.app-area .common-inner {
+  display: flex;
+}
+.app-area .app-slider-group {
+  position: relative;
+  width: 40%;
+  text-align: center;
+}
+.app-area .app-slider-group .app-slider {
+  position: absolute;
+  top: 0;
+  width: 277px;
+  overflow: hidden;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-area .app-slider-group .app-slider .slick-dots {
+  bottom: 5px;
+}
+.app-area .app-slider-group .app-slider .slick-dots li {
+  margin: 0;
+}
+.app-area .app-info-group {
+  position: relative;
+  width: 60%;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+.app-area .app-info-group .app-thumb {
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.1);
+  width: 280px;
+}
+.app-area .app-info-group .app-thumb img {
+  width: 100%;
+  display: block;
+}
+.app-area .app-info-group .app-info h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+.app-area .app-info-group .app-info .app-download-btn {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-area .app-info-group .app-info .app-download-btn a {
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.app-area .app-info-group .app-info .app-download-btn a:first-child {
+  margin-right: 20px;
+}
+.app-area .app-info-group .app-info .app-download-btn a:hover.playstore-btn {
+  background-color: #fff;
+  color: #056531;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.app-area .app-info-group .app-info .app-download-btn a:hover.appstore-btn {
+  color: #056531;
+  box-shadow: 0 0 3px #056531;
+}
+.app-area .app-info-group .app-info .app-download-btn a i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: inherit;
+}
+.app-area .app-info-group .app-info .app-download-btn a.playstore-btn {
+  background-color: #056531;
+  color: white;
+}
+.app-area .app-info-group .app-info .app-download-btn a.appstore-btn {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
