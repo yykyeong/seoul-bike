@@ -42,6 +42,19 @@ section:not(.visual-area) {
     font-size: 26px;
     color: $font-point-color;
   }
-
-
 }
+
+
+
+@media (max-width: 768px) {
+  section:not(.visual-area) {
+    padding: 50px 15px;
+  }
+  
+  .common-inner {
+    width: 100%;
+  }
+  .common-title {
+    margin-bottom: 30px;
+  }
+} 

@@ -10,9 +10,13 @@
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
   <!-- slick -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
   <!-- font Awesome -->
   <script src="https://kit.fontawesome.com/96aea79129.js" crossorigin="anonymous"></script>
@@ -39,6 +43,7 @@
           <li><a href="#none">안전수칙</a></li>
         </ul>
       </nav>
+      <div class="trigger"></div>
     </div>
   </header>
 
@@ -73,12 +78,12 @@
       </div>
       <div class="info-img">
         <div class="info-img-list">
-          <div class="info-img-item"><img src="./img/info01.png" alt="건강한 자전거 도시"><span></span></div>
-          <div class="info-img-item"><img src="./img/info02.png" alt="깨끗한 자전거 도시"><span></span></div>
+          <div class="info-img-item" data-aos="fade-right" data-aos-easing="linear"><img src="./img/info01.png" alt="건강한 자전거 도시"><span></span></div>
+          <div class="info-img-item" data-aos="fade-left" data-aos-easing="linear" data-aos-delay="250"><img src="./img/info02.png" alt="깨끗한 자전거 도시"><span></span></div>
         </div>
         <div class="info-img-list">
-          <div class="info-img-item"><img src="./img/info03.png" alt="녹색 성장 선도 도시"><span></span></div>
-          <div class="info-img-item"><img src="./img/info04.png" alt="편리한 자전거 도시"><span></span></div>
+          <div class="info-img-item" data-aos="fade-left" data-aos-easing="linear" data-aos-delay="350"><img src="./img/info03.png" alt="녹색 성장 선도 도시"><span></span></div>
+          <div class="info-img-item"  data-aos="fade-down" data-aos-easing="linear" data-aos-delay="300"><img src="./img/info04.png" alt="편리한 자전거 도시"><span></span></div>
         </div>
       </div>
     </div>
@@ -87,7 +92,7 @@
   <!-- app -->
   <section class="app-area">
     <div class="common-inner">
-      <div class="app-slider-group">
+      <div class="app-slider-group" data-aos="fade-right">
         <img class="mockup-img" src="./img/phone-mockup.png" alt="앱 다운로드">
         <div class="app-slider">
           <img src="./img/app01.png" alt="앱 다운로드">
@@ -97,21 +102,24 @@
           <img src="./img/app05.png" alt="앱 다운로드">
         </div>
       </div>
-      <div class="app-info-group">
-        <div class="app-thumb"><img src="./img/app-img.png" alt="서울따릉이"></div>
-        <div class="app-info">
-          <h2>서울자전거 따릉이</h2>
-          <p>
-            서울특별시에서 운영하는 공공자전거(서울자전거-따릉이) 전용앱으로 회원가입 및 이용권구매, 대여, 반납, 대여소 확인 등이 가능합니다.
-          </p>
-          <div class="app-download-btn">
-            <a href="#none" target="_blank" class="playstore-btn"><i class="fa-brands fa-google-play"></i>Google Play
-              다운로드</a>
-            <a href="#none" target="_blank" class="appstore-btn"><i class="fa-brands fa-app-store-ios"></i>App Store
-              다운로드</a>
+      <div class="app-download-group">
+        <div class="app-info-content">
+          <div class="app-thumb"><img src="./img/app-img.png" alt="서울따릉이"></div>
+          <div class="app-info">
+            <h2>서울자전거 따릉이</h2>
+            <p>
+              서울특별시에서 운영하는 공공자전거(서울자전거-따릉이) 전용앱으로 회원가입 및 이용권구매, 대여, 반납, 대여소 확인 등이 가능합니다.
+            </p>
           </div>
         </div>
+        <div class="app-download-btn">
+          <a href="#none" target="_blank" class="playstore-btn"><i class="fa-brands fa-google-play"></i>Google Play
+            다운로드</a>
+          <a href="#none" target="_blank" class="appstore-btn"><i class="fa-brands fa-app-store-ios"></i>App Store
+            다운로드</a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -171,7 +179,7 @@
     <div class="common-title">대여소 구성요소</div>
     <div class="common-inner">
       <div class="bike-list">
-        <div class="bike-item">
+        <div class="bike-item"  data-aos="fade-up" data-aos-duration="1500">
           <span></span>
           <span></span>
           <span></span>
@@ -186,7 +194,7 @@
             </div>
           </div>
         </div>
-        <div class="bike-item">
+        <div class="bike-item"  data-aos="fade-down" data-aos-duration="1500">
           <span></span>
           <span></span>
           <span></span>
@@ -211,7 +219,7 @@
     <div class="common-title">안전수칙</div>
     <div class="common-inner">
       <ul class="safe-list">
-        <li class="safe-item">
+        <li class="safe-item"  data-aos="fade-down" >
           <img src="./img/safe1.png" alt="출발 전 점검">
           <div class="safe-info">
             <h3>출발 전 점검</h3>
@@ -220,7 +228,7 @@
             </p>
           </div>
         </li>
-        <li class="safe-item">
+        <li class="safe-item" data-aos="fade-down" data-aos-delay="150">
           <img src="./img/safe2.png" alt="안전모 착용">
           <div class="safe-info">
             <h3>안전모 착용</h3>
@@ -229,7 +237,7 @@
             </p>
           </div>
         </li>
-        <li class="safe-item">
+        <li class="safe-item" data-aos="fade-down" data-aos-delay="200">
           <img src="./img/safe3.png" alt="음주 운전 금지">
           <div class="safe-info">
             <h3>음주 운전 금지</h3>
@@ -239,7 +247,7 @@
             </p>
           </div>
         </li>
-        <li class="safe-item">
+        <li class="safe-item" data-aos="fade-down" data-aos-delay="250">
           <img src="./img/safe4.png" alt="자전거 도로 이용">
           <div class="safe-info">
             <h3>자전거 도로 이용</h3>
@@ -250,7 +258,7 @@
             </p>
           </div>
         </li>
-        <li class="safe-item">
+        <li class="safe-item" data-aos="fade-down" data-aos-delay="300">
           <img src="./img/safe5.png" alt="횡단보도 이용시">
           <div class="safe-info">
             <h3>횡단보도 이용시</h3>
@@ -259,7 +267,7 @@
             </p>
           </div>
         </li>
-        <li class="safe-item">
+        <li class="safe-item" data-aos="fade-down" data-aos-delay="350">
           <img src="./img/safe6.png" alt="보행자 배려">
           <div class="safe-info">
             <h3>보행자 배려</h3>
@@ -269,7 +277,7 @@
             </p>
           </div>
         </li>
-        <li class="safe-item">
+        <li class="safe-item" data-aos="fade-down" data-aos-delay="400">
           <img src="./img/safe7.png" alt="주행 중 기타행위 금지">
           <div class="safe-info">
             <h3>주행 중 기타행위 금지</h3>
@@ -347,7 +355,7 @@
           </li>
           <li class="faq-item">
             <div class="faq-title">
-              대여를 시도했는데 자전거 잠금장치가 해제되지 않습니다.
+              잠금장치가 해제되지 않습니다.
             </div>
             <div class="faq-desc">
               ○ 따릉이 단말기 고장 또는 통신상태에 일시 장애가 있는 경우 잠금장치가 해제되지 않을 수 있습니다.<br><br>
@@ -407,7 +415,8 @@
           <li><a href="#none">도움주신 분</a></li>
         </ul>
         <div class="address">
-            서울특별시 중구 세종대로 110 서울특별시 대표자 오세훈, Tel : 1599-0120 (사업자등록번호 : 104-83-00469) 우편번호 04524
+            서울특별시 중구 세종대로 110 서울특별시 대표자 오세훈, 
+            <span class="m-br">Tel : 1599-0120 (사업자등록번호 : 104-83-00469) 우편번호 04524</span>
         </div>
       </div>
       <div class="sns-group">
