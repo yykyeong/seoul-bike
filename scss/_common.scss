@@ -8,13 +8,40 @@ section:not(.visual-area) {
 }
 
 .common-title {
-    text-align: center;
-    font-weight: 600;
-    font-size: 22px;
-    margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 55px;
+  padding-top: 10px;
 
-    b {
-      font-size: 24px;
-      color: $font-point-color;
-    }
+  &::before, &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 5px;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    right: 50%;
+    border-radius: 90px 0 0 90px;
+    background-color: $logo-color;
+  }
+
+  &::after {
+    left: 50%;
+
+    border-radius: 0 90px 90px 0;
+    background-color: $point-bg;
+  }
+
+  b {
+    font-size: 26px;
+    color: $font-point-color;
+  }
+
+
 }
