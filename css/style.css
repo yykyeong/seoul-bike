@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul,
 li {
   list-style: none;
@@ -70,6 +74,25 @@ section:not(.visual-area) {
 .common-title b {
   font-size: 26px;
   color: #4cab6a;
+}
+
+.go-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: -50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 40px;
+  text-align: center;
+  transition: 0.5s;
+}
+.go-to-top i {
+  color: #fff;
+}
+.go-to-top.active {
+  bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -264,6 +287,9 @@ header .trigger {
 }
 
 /* info-area */
+.info-area {
+  overflow: hidden;
+}
 .info-area .info-img .info-img-list {
   display: flex;
   justify-content: center;

@@ -223,6 +223,7 @@ header {
 
 /* info-area */
 .info-area {
+  overflow: hidden;
   .info-img {
     .info-img-list {
       display: flex;

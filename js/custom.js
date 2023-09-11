@@ -4,10 +4,10 @@ $(function(){
   /* header */
   $(window).scroll(function(){
     if($(window).scrollTop() > 50){
-      $('header').addClass('active')
+      $('header, .go-to-top').addClass('active')
     }
     else {
-      $('header').removeClass('active')
+      $('header , .go-to-top').removeClass('active')
     }
   });
 
