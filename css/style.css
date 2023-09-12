@@ -628,9 +628,7 @@ header .trigger {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .bike-area .bike-list .bike-item {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 }
 
